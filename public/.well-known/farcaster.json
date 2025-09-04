@@ -10,7 +10,7 @@
     "subtitle": "Built with Zara",
     "description": "AssetSync is a Base Mini App built with Zara.",
     "iconUrl": "https://0co.to/images/zara-2.png",
-    "homeUrl": "https://f4221d468fcb475093f5a7bea49efbd2-4ksx-d2d4s5hb7-vistara.vercel.app",
+    "homeUrl": "https://f4221d468fcb475093f5a7bea49efbd2-uxgl-ytzzy2tfl-vistara.vercel.app",
     "splashImageUrl": "https://f4221d468fcb475093f5a7bea49efbd2-4ksx-d2d4s5hb7-vistara.vercel.app/splash.png",
     "splashBackgroundColor": "#000000",
     "heroImageUrl": "https://f4221d468fcb475093f5a7bea49efbd2-4ksx-d2d4s5hb7-vistara.vercel.app/image.png",
@@ -25,6 +25,6 @@
       "miniapp",
       "onchainkit"
     ],
-    "webhookUrl": "https://f4221d468fcb475093f5a7bea49efbd2-4ksx-d2d4s5hb7-vistara.vercel.app/api/webhook"
+    "webhookUrl": "https://f4221d468fcb475093f5a7bea49efbd2-uxgl-ytzzy2tfl-vistara.vercel.app/api/webhook"
   }
 }
