@@ -38,18 +38,18 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-250 shadow-lg hover:shadow-xl;
+    @apply bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl;
   }
 
   .btn-secondary {
-    @apply glass-card text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-20 transition-all duration-250;
+    @apply glass-card text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-20 transition-all duration-200;
   }
 
   .metric-card {
-    @apply glass-card p-6 rounded-lg hover:bg-opacity-15 transition-all duration-250;
+    @apply glass-card p-6 rounded-lg hover:bg-opacity-15 transition-all duration-200;
   }
 
   .asset-card {
-    @apply glass-card p-4 rounded-lg hover:bg-opacity-15 transition-all duration-250 cursor-pointer;
+    @apply glass-card p-4 rounded-lg hover:bg-opacity-15 transition-all duration-200 cursor-pointer;
   }
 }
