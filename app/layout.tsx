@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AssetSync',
     description: 'Unify your crypto assets, see your whole portfolio at a glance.',
-    type: 'website',
+    images: ['/og-image.png'],
   },
 };
 

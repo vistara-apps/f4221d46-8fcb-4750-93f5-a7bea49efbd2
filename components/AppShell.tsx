@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { Search, Wallet, TrendingUp } from 'lucide-react';
+import { Menu, Home, Search, BarChart3, Wallet } from 'lucide-react';
 
 interface AppShellProps {
   children: ReactNode;
@@ -9,38 +9,81 @@ interface AppShellProps {
 
 export function AppShell({ children }: AppShellProps) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-pink-500">
-      {/* Background decorative elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-20 w-64 h-64 bg-purple-500 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-pink-500 rounded-full opacity-15 blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-cyan-400 rounded-full opacity-10 blur-3xl"></div>
-      </div>
-
-      {/* Header */}
-      <header className="relative z-10 glass-card mx-4 mt-4 p-4 rounded-lg">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
-              <TrendingUp className="w-5 h-5 text-white" />
-            </div>
-            <h1 className="text-xl font-bold gradient-text">AssetSync</h1>
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+      {/* Mobile Header */}
+      <header className="lg:hidden flex items-center justify-between p-4 border-b border-white border-opacity-20">
+        <div className="flex items-center space-x-3">
+          <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
+            <Home className="w-5 h-5 text-white" />
           </div>
-          <div className="flex items-center space-x-2">
-            <button className="glass-card p-2 rounded-lg hover:bg-opacity-20 transition-all">
-              <Search className="w-5 h-5 text-white" />
-            </button>
-            <button className="glass-card p-2 rounded-lg hover:bg-opacity-20 transition-all">
-              <Wallet className="w-5 h-5 text-white" />
-            </button>
-          </div>
+          <h1 className="text-xl font-bold text-white">AssetSync</h1>
         </div>
+        <button className="p-2 hover:bg-white hover:bg-opacity-10 rounded-lg transition-colors">
+          <Menu className="w-6 h-6 text-white" />
+        </button>
       </header>
 
-      {/* Main content */}
-      <main className="relative z-10 container mx-auto px-4 py-6 max-w-lg">
-        {children}
-      </main>
+      <div className="flex">
+        {/* Desktop Sidebar */}
+        <aside className="hidden lg:flex flex-col w-64 min-h-screen border-r border-white border-opacity-20 bg-black bg-opacity-20">
+          <div className="p-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
+                <Home className="w-6 h-6 text-white" />
+              </div>
+              <h1 className="text-xl font-bold text-white">AssetSync</h1>
+            </div>
+          </div>
+          
+          <nav className="flex-1 px-4 space-y-2">
+            <NavItem icon={<Home className="w-5 h-5" />} label="Portfolio" active />
+            <NavItem icon={<Search className="w-5 h-5" />} label="Search" />
+            <NavItem icon={<BarChart3 className="w-5 h-5" />} label="Analytics" />
+            <NavItem icon={<Wallet className="w-5 h-5" />} label="Wallets" />
+          </nav>
+        </aside>
+
+        {/* Main Content */}
+        <main className="flex-1 p-4 lg:p-6">
+          <div className="max-w-7xl mx-auto">
+            {children}
+          </div>
+        </main>
+      </div>
+
+      {/* Mobile Bottom Navigation */}
+      <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-black bg-opacity-40 backdrop-blur-lg border-t border-white border-opacity-20">
+        <div className="flex items-center justify-around py-2">
+          <NavItem icon={<Home className="w-5 h-5" />} label="Portfolio" active mobile />
+          <NavItem icon={<Search className="w-5 h-5" />} label="Search" mobile />
+          <NavItem icon={<BarChart3 className="w-5 h-5" />} label="Analytics" mobile />
+          <NavItem icon={<Wallet className="w-5 h-5" />} label="Wallets" mobile />
+        </div>
+      </nav>
     </div>
+  );
+}
+
+interface NavItemProps {
+  icon: ReactNode;
+  label: string;
+  active?: boolean;
+  mobile?: boolean;
+}
+
+function NavItem({ icon, label, active = false, mobile = false }: NavItemProps) {
+  const baseClasses = mobile
+    ? "flex flex-col items-center space-y-1 p-2 rounded-lg transition-colors"
+    : "flex items-center space-x-3 p-3 rounded-lg transition-colors";
+    
+  const activeClasses = active
+    ? "bg-purple-600 bg-opacity-30 text-purple-300"
+    : "text-gray-400 hover:text-white hover:bg-white hover:bg-opacity-10";
+
+  return (
+    <button className={`${baseClasses} ${activeClasses}`}>
+      {icon}
+      <span className={mobile ? "text-xs" : "text-sm font-medium"}>{label}</span>
+    </button>
   );
 }

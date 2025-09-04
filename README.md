@@ -1,22 +1,22 @@
 # AssetSync - Base Mini App
 
-A unified crypto portfolio dashboard for Farcaster users built with Next.js 15 and OnchainKit.
+Unify your crypto assets, see your whole portfolio at a glance.
 
 ## Features
 
-- **Unified Portfolio Dashboard**: View all your crypto assets in one place
-- **Universal Asset Search**: Find any asset across all connected platforms
-- **Real-time Portfolio Tracking**: See current values and 24h changes
-- **Multi-platform Support**: Aggregates assets from various exchanges and DeFi protocols
-- **Beautiful UI**: Modern glass-morphism design with smooth animations
+- **Unified Portfolio Dashboard**: Aggregates all cryptocurrency holdings from connected wallets and exchanges into a single view
+- **Universal Asset Search**: Find any specific asset across all aggregated accounts
+- **Real-time Portfolio Tracking**: Monitor asset values, P&L, and overall portfolio allocation
+- **Multi-platform Support**: Connect wallets from MetaMask, Coinbase, and other providers
+- **Mobile-first Design**: Optimized for Farcaster frames and mobile usage
 
 ## Tech Stack
 
 - **Framework**: Next.js 15 with App Router
-- **Blockchain**: Base (via OnchainKit)
+- **Blockchain**: Base network integration via OnchainKit
+- **Wallet**: MiniKit for Farcaster integration
 - **Styling**: Tailwind CSS with custom design system
-- **TypeScript**: Full type safety
-- **Mini App**: Farcaster Frame integration
+- **TypeScript**: Full type safety throughout
 
 ## Getting Started
 
@@ -44,39 +44,39 @@ A unified crypto portfolio dashboard for Farcaster users built with Next.js 15 a
 ```
 ├── app/                    # Next.js App Router
 │   ├── layout.tsx         # Root layout with providers
-│   ├── page.tsx           # Main page component
+│   ├── page.tsx           # Main portfolio page
 │   ├── providers.tsx      # MiniKit and OnchainKit providers
-│   └── globals.css        # Global styles and design tokens
+│   └── globals.css        # Global styles and Tailwind
 ├── components/            # Reusable UI components
-│   ├── AppShell.tsx       # Main app layout
+│   ├── AppShell.tsx       # Main app layout and navigation
 │   ├── AssetCard.tsx      # Individual asset display
-│   ├── DataDisplay.tsx    # Portfolio metrics
-│   ├── PortfolioDashboard.tsx # Main dashboard
-│   └── SearchBar.tsx      # Universal search
+│   ├── SearchBar.tsx      # Universal asset search
+│   ├── DataDisplay.tsx    # Portfolio metrics display
+│   ├── PortfolioChart.tsx # Performance visualization
+│   └── WalletConnection.tsx # Wallet connection UI
 ├── lib/                   # Utilities and types
 │   ├── types.ts           # TypeScript interfaces
-│   └── mockData.ts        # Sample data for demo
-└── README.md
+│   ├── mock-data.ts       # Demo portfolio data
+│   └── utils.ts           # Helper functions
 ```
 
 ## Design System
 
 The app uses a custom design system with:
 
-- **Colors**: Purple/pink gradient theme with glass-morphism effects
-- **Typography**: Inter font with semantic text sizes
-- **Spacing**: Consistent spacing scale (sm: 8px, md: 12px, lg: 20px)
-- **Animations**: Smooth transitions with 250ms duration
+- **Colors**: Purple/blue gradient theme with glass morphism effects
+- **Typography**: Clean, modern font hierarchy
 - **Components**: Modular, reusable UI components
+- **Responsive**: Mobile-first design optimized for Farcaster frames
 
 ## API Integration
 
-Currently uses mock data for demonstration. Ready for integration with:
+Ready for integration with:
 
-- **Airstack**: For on-chain asset data
-- **Neynar**: For Farcaster user authentication
-- **WalletConnect**: For wallet connections
-- **Reservoir**: For NFT data (future feature)
+- **Airstack**: On-chain asset and transaction data
+- **Neynar**: Farcaster user authentication and data
+- **WalletConnect**: Multi-wallet connection support
+- **Reservoir**: NFT and marketplace data (future expansion)
 
 ## Deployment
 
@@ -91,4 +91,4 @@ The app is optimized for deployment on Vercel or similar platforms that support 
 
 ## License
 
-MIT License - see LICENSE file for details.
+MIT License - see LICENSE file for details

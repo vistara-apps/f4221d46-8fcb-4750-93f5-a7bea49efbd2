@@ -1,12 +1,10 @@
 export interface User {
-  id: string;
   farcasterId: string;
   connectedWallets: string[];
   createdAt: Date;
 }
 
 export interface AssetHolding {
-  id: string;
   userId: string;
   assetSymbol: string;
   assetName: string;
@@ -18,7 +16,7 @@ export interface AssetHolding {
   logo?: string;
 }
 
-export interface PortfolioSummary {
+export interface PortfolioMetrics {
   totalValue: number;
   totalChange24h: number;
   totalChangePercent24h: number;
@@ -27,6 +25,7 @@ export interface PortfolioSummary {
 
 export interface SearchResult {
   asset: AssetHolding;
-  platform: string;
-  quantity: number;
+  platforms: string[];
+  totalQuantity: number;
+  totalValue: number;
 }

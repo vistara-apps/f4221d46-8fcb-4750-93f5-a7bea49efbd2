@@ -8,22 +8,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: 'hsl(225, 12%, 95%)',
-        accent: 'hsl(160, 100%, 40%)',
         primary: 'hsl(220, 100%, 50%)',
+        accent: 'hsl(160, 100%, 40%)',
+        bg: 'hsl(225, 12%, 95%)',
         surface: 'hsl(0, 0%, 100%)',
         'text-primary': 'hsl(220, 15%, 25%)',
         'text-secondary': 'hsl(220, 15%, 45%)',
       },
       borderRadius: {
-        'lg': '16px',
-        'md': '10px',
         'sm': '6px',
+        'md': '10px',
+        'lg': '16px',
       },
       spacing: {
-        'lg': '20px',
-        'md': '12px',
         'sm': '8px',
+        'md': '12px',
+        'lg': '20px',
       },
       boxShadow: {
         'card': '0 2px 8px hsla(220, 10%, 15%, 0.08)',
