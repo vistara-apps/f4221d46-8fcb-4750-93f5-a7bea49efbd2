@@ -79,5 +79,6 @@ export const mockPortfolioSummary: PortfolioSummary = {
   totalValue: 16164.25,
   totalChange24h: 245.80,
   totalChangePercent24h: 1.54,
-  assetCount: 6
+  assetCount: 6,
+  platformCount: 5
 };

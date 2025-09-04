@@ -5,6 +5,7 @@ export interface User {
 }
 
 export interface AssetHolding {
+  id?: string;
   userId: string;
   assetSymbol: string;
   assetName: string;
@@ -21,6 +22,14 @@ export interface PortfolioMetrics {
   totalChange24h: number;
   totalChangePercent24h: number;
   assetCount: number;
+}
+
+export interface PortfolioSummary {
+  totalValue: number;
+  totalChange24h: number;
+  totalChangePercent24h: number;
+  assetCount: number;
+  platformCount: number;
 }
 
 export interface SearchResult {

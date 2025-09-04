@@ -46,7 +46,7 @@ export function PortfolioDashboard() {
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Portfolio Summary */}
-      <DataDisplay summary={summary} variant="metric" />
+      <DataDisplay metrics={summary} variant="metric" />
 
       {/* Search and Controls */}
       <div className="space-y-4">

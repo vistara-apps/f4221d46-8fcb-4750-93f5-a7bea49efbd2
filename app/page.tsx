@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Wallet as WalletIcon } from 'lucide-react';
 import { AppShell } from '@/components/AppShell';
 import { SearchBar } from '@/components/SearchBar';
 import { AssetCard } from '@/components/AssetCard';
