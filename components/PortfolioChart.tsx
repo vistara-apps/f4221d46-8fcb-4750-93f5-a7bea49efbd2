@@ -12,8 +12,8 @@ export function PortfolioChart({ data }: PortfolioChartProps) {
     <div className="h-48 w-full">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={data}>
-          <XAxis 
-            dataKey="time" 
+          <XAxis
+            dataKey="time"
             axisLine={false}
             tickLine={false}
             tick={{ fontSize: 12, fill: '#9CA3AF' }}

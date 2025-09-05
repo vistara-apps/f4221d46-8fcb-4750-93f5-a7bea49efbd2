@@ -17,11 +17,14 @@ export function WalletConnection() {
     <div className="glass-card p-6 rounded-lg">
       <div className="flex items-center space-x-3 mb-4">
         <WalletIcon className="w-6 h-6 text-purple-400" />
-        <h3 className="text-lg font-semibold text-white">Connect Your Wallet</h3>
+        <h3 className="text-lg font-semibold text-white">
+          Connect Your Wallet
+        </h3>
       </div>
-      
+
       <p className="text-gray-300 text-sm mb-6">
-        Connect your wallet to view your complete crypto portfolio across all platforms.
+        Connect your wallet to view your complete crypto portfolio across all
+        platforms.
       </p>
 
       <Wallet>
@@ -31,7 +34,7 @@ export function WalletConnection() {
             <span>Connect Wallet</span>
           </div>
         </ConnectWallet>
-        
+
         <div className="mt-4 flex items-center space-x-3">
           <Avatar className="w-8 h-8" />
           <Name className="text-white" />

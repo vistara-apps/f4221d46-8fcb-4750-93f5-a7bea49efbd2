@@ -10,7 +10,7 @@ interface AssetListProps {
   title?: string;
 }
 
-export function AssetList({ assets, title = "Your Assets" }: AssetListProps) {
+export function AssetList({ assets, title = 'Your Assets' }: AssetListProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredAssets, setFilteredAssets] = useState(assets);
 
@@ -21,10 +21,11 @@ export function AssetList({ assets, title = "Your Assets" }: AssetListProps) {
       return;
     }
 
-    const filtered = assets.filter(asset =>
-      asset.assetName.toLowerCase().includes(query.toLowerCase()) ||
-      asset.assetSymbol.toLowerCase().includes(query.toLowerCase()) ||
-      asset.platform.toLowerCase().includes(query.toLowerCase())
+    const filtered = assets.filter(
+      (asset) =>
+        asset.assetName.toLowerCase().includes(query.toLowerCase()) ||
+        asset.assetSymbol.toLowerCase().includes(query.toLowerCase()) ||
+        asset.platform.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredAssets(filtered);
   };
@@ -43,7 +44,9 @@ export function AssetList({ assets, title = "Your Assets" }: AssetListProps) {
       {filteredAssets.length === 0 ? (
         <div className="glass-card p-8 rounded-lg text-center">
           <p className="text-gray-400">
-            {searchQuery ? 'No assets found matching your search.' : 'No assets found.'}
+            {searchQuery
+              ? 'No assets found matching your search.'
+              : 'No assets found.'}
           </p>
           {searchQuery && (
             <button
@@ -57,7 +60,11 @@ export function AssetList({ assets, title = "Your Assets" }: AssetListProps) {
       ) : (
         <div className="space-y-4">
           {filteredAssets.map((asset, index) => (
-            <AssetCard key={`${asset.assetSymbol}-${index}`} asset={asset} variant="compact" />
+            <AssetCard
+              key={`${asset.assetSymbol}-${index}`}
+              asset={asset}
+              variant="compact"
+            />
           ))}
         </div>
       )}

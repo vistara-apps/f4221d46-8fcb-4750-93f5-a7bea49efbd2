@@ -8,7 +8,10 @@ interface SearchBarProps {
   placeholder?: string;
 }
 
-export function SearchBar({ onSearch, placeholder = "Search assets..." }: SearchBarProps) {
+export function SearchBar({
+  onSearch,
+  placeholder = 'Search assets...',
+}: SearchBarProps) {
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
 
@@ -24,7 +27,9 @@ export function SearchBar({ onSearch, placeholder = "Search assets..." }: Search
 
   return (
     <form onSubmit={handleSubmit} className="relative">
-      <div className={`search-input flex items-center space-x-3 ${isFocused ? 'ring-2 ring-purple-400' : ''}`}>
+      <div
+        className={`search-input flex items-center space-x-3 ${isFocused ? 'ring-2 ring-purple-400' : ''}`}
+      >
         <Search className="w-5 h-5 text-gray-400" />
         <input
           type="text"
