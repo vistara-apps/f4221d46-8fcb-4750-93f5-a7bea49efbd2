@@ -78,6 +78,9 @@ const config: Config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      boxShadow: {
+        card: '0 2px 8px hsla(220, 10%, 15%, 0.08)',
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
