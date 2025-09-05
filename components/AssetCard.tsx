@@ -26,8 +26,12 @@ export function AssetCard({ asset, variant = 'default' }: AssetCardProps) {
             </div>
           </div>
           <div className="text-right">
-            <p className="font-semibold text-white">{formatCurrency(asset.currentValue)}</p>
-            <div className={`flex items-center space-x-1 ${getChangeColor(asset.priceChange24h || 0)}`}>
+            <p className="font-semibold text-white">
+              {formatCurrency(asset.currentValue)}
+            </p>
+            <div
+              className={`flex items-center space-x-1 ${getChangeColor(asset.priceChange24h || 0)}`}
+            >
               {isPositive ? (
                 <TrendingUp className="w-3 h-3" />
               ) : (
@@ -51,13 +55,19 @@ export function AssetCard({ asset, variant = 'default' }: AssetCardProps) {
             {asset.logo}
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-white">{asset.assetName}</h3>
+            <h3 className="text-lg font-semibold text-white">
+              {asset.assetName}
+            </h3>
             <p className="text-sm text-gray-400">{asset.assetSymbol}</p>
           </div>
         </div>
         <div className="text-right">
-          <p className="text-lg font-semibold text-white">{formatCurrency(asset.currentValue)}</p>
-          <div className={`flex items-center space-x-1 ${getChangeColor(asset.priceChange24h || 0)}`}>
+          <p className="text-lg font-semibold text-white">
+            {formatCurrency(asset.currentValue)}
+          </p>
+          <div
+            className={`flex items-center space-x-1 ${getChangeColor(asset.priceChange24h || 0)}`}
+          >
             {isPositive ? (
               <TrendingUp className="w-4 h-4" />
             ) : (
@@ -69,7 +79,7 @@ export function AssetCard({ asset, variant = 'default' }: AssetCardProps) {
           </div>
         </div>
       </div>
-      
+
       <div className="space-y-2">
         <div className="flex justify-between text-sm">
           <span className="text-gray-400">Quantity</span>
@@ -81,7 +91,9 @@ export function AssetCard({ asset, variant = 'default' }: AssetCardProps) {
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-400">Last Updated</span>
-          <span className="text-white">{asset.lastUpdated.toLocaleTimeString()}</span>
+          <span className="text-white">
+            {asset.lastUpdated.toLocaleTimeString()}
+          </span>
         </div>
       </div>
     </div>

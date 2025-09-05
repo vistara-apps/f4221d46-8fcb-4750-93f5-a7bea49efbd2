@@ -10,21 +10,27 @@ import { useAccount } from 'wagmi';
 
 export default function HomePage() {
   const { isConnected } = useAccount();
-  const [activeTab, setActiveTab] = useState<'portfolio' | 'assets'>('portfolio');
+  const [activeTab, setActiveTab] = useState<'portfolio' | 'assets'>(
+    'portfolio'
+  );
 
   return (
     <AppShell>
       {!isConnected ? (
         <div className="space-y-6">
           <WalletConnection />
-          
+
           {/* Demo Preview */}
           <div className="glass-card p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-white mb-4">Preview: What You'll See</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Preview: What You&apos;ll See
+            </h3>
             <div className="space-y-4 opacity-60">
               <div className="flex justify-between items-center">
                 <span className="text-gray-300">Total Portfolio Value</span>
-                <span className="text-2xl font-bold text-white">$22,825.00</span>
+                <span className="text-2xl font-bold text-white">
+                  $22,825.00
+                </span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-gray-300">24h Change</span>

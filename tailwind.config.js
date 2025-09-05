@@ -16,17 +16,17 @@ module.exports = {
         'text-secondary': 'hsl(220, 15%, 45%)',
       },
       borderRadius: {
-        'sm': '6px',
-        'md': '10px',
-        'lg': '16px',
+        sm: '6px',
+        md: '10px',
+        lg: '16px',
       },
       spacing: {
-        'sm': '8px',
-        'md': '12px',
-        'lg': '20px',
+        sm: '8px',
+        md: '12px',
+        lg: '20px',
       },
       boxShadow: {
-        'card': '0 2px 8px hsla(220, 10%, 15%, 0.08)',
+        card: '0 2px 8px hsla(220, 10%, 15%, 0.08)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -45,4 +45,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

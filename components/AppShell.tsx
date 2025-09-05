@@ -25,9 +25,7 @@ export function AppShell({ children }: AppShellProps) {
         </header>
 
         {/* Main Content */}
-        <main className="space-y-6">
-          {children}
-        </main>
+        <main className="space-y-6">{children}</main>
 
         {/* Bottom Navigation */}
         <nav className="fixed bottom-0 left-0 right-0 bg-black bg-opacity-30 backdrop-blur-md border-t border-white border-opacity-10">

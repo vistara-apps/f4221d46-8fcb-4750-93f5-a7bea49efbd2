@@ -20,11 +20,7 @@
       "https://f4221d468fcb475093f5a7bea49efbd2-4dha-8l3x9orms-vistara.vercel.app/screenshot.png"
     ],
     "primaryCategory": "social",
-    "tags": [
-      "base",
-      "miniapp",
-      "onchainkit"
-    ],
+    "tags": ["base", "miniapp", "onchainkit"],
     "webhookUrl": "https://f4221d468fcb475093f5a7bea49efbd2-4dha-8l3x9orms-vistara.vercel.app/api/webhook"
   }
 }
